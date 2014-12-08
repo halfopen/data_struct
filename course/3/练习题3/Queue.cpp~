@@ -1,0 +1,12 @@
+#include "Queue.h"
+
+void Initqueue(SqQueue *&q);
+
+void DestroyQueue(SqQueue *&q);
+
+bool QueueEmpty( SqQueue * q);
+
+bool enQueue( SqQueue *&q, ElemType e);
+
+bool deQueue( SqQueue *&q, ElemType &e);
+

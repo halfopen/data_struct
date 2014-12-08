@@ -1,0 +1,3 @@
+g++ main.cpp exp.h main.cpp exp.cpp LiStack.cpp LiStack.h -o exp.out -Wall
+echo "ok"
+./exp.out

@@ -1,0 +1,26 @@
+/*	function:Expression value----main_cpp
+**	time:2014-10-09- 16:04
+**	author:halfopen
+**	version:1
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "LiStack.h"
+#include "exp.h"
+
+int main()
+{	char exp[1024] ={0};
+    	//puts("start");
+    	char postexp[1024]={0};
+	while(scanf("%s",exp) == 1)
+	{	if(strcmp(exp,"NULL")==true)break;
+		expTurn(exp);
+		trans(exp,postexp);		
+		printf("exp:%s\n",exp);
+		printf("\tpostexp:%s\n",postexp);
+		printf("\tcompvalue:%g\n",compvalue(postexp));
+	}
+	puts("exit");
+	return 0;
+}

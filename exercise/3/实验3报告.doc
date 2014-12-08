@@ -1,0 +1,35 @@
+家谱系统实验报告
+编译环境：g++ (Ubuntu 4.9.1-16ubuntu6) 4.9.1
+
+设计日期 2014.11.26
+
+设计人员：
+　　　秦贤康 2013301500100
+　　　
+实验题目：用二叉树实现家谱系统
+工程组成：
+　　　main.cpp   主程序
+　　　fileOperate.cpp 文件操作函数实现
+　　　Fileoperate.h    文件操作声明
+　　　btree.cpp   链表
+　　　btree.h  链表头文件
+　　　Run.sh    编译运行脚本/linux
+　　　Run.bat   编译运行脚本/windows
+
+数据结构：二叉树
+typedef struct node
+{       ElemType data;
+        struct node * lchild;
+        struct node * rchild;
+}BTNode;　　　
+程序结构：
+
+算法描述：
+　　　这个实验基本上用的都是基本的链表操作，排序用的是插入排序
+　　　
+实验数据及结果：
+
+
+　　　
+
+

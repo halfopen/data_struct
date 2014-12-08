@@ -1,0 +1,75 @@
+/*	
+**	数据结构综合实验3-二叉树实现家谱的相关运算
+**	time:2014-11-26 20:43
+**	author:halfopen
+**	version:1
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "btree.h"
+#include "fileOperate.h"
+
+//家谱的最大长度
+#define MaxSize 1024 
+
+void printMenu();
+int main()
+{	LinkList *L;
+	char b[MaxSize];
+	b = "";
+	while(printMenu(),puts("Enter your choice"),choose=getchar())
+	{	fflush(stdin);
+		switch(choose)
+		{	case '1':
+			{	 DispBTNode(b);
+			}break;
+			case '2':
+			{	 DispBTNode1(b, 1);
+			}break;
+			case '3':
+			{	puts("Please input: no(int) name(varchar) depno(int) salary(int)");
+				scanf("%d %s %d %d",&no,name,&depno,&salary);
+				InsertList(L,no,name,depno,salary);
+				puts("Added");
+			}break;
+			case '4':case '5':case '6':
+			{	choose -= 3 +'0';
+				sortList(L,choose);
+				puts("Sorted");
+				
+			}break;
+			case '7':
+			{	clearData();
+				puts("Cleared");
+			}break;
+			case '8':
+			{	writeData(L);
+				puts("Saved");
+			}break;
+			default:
+			{DestroyList(L);exit(0);}
+		}
+		puts("press any key to continue");fflush(stdin);getchar();getchar();
+		fflush(stdin);
+	}
+	DestroyList(L);
+	return 0;
+}
+
+void printMenu()
+{	puts("\t--------------family tree----------------");
+	puts("\t1.show family tree---form1");
+	puts("\t2.show family tree---form2");
+	puts("\t3.read family tree from family.dat");
+	puts("\t4.insert new family tree");
+	puts("\t5.find son of x");
+	puts("\t6.find parents of x");
+	puts("\t7.clear all record from emp.dat");
+	puts("\t8.save family tree to family.dat");
+	puts("\t\tother.exit");
+}
+
+
+
